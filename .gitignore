@@ -1,0 +1,19 @@
+# Real logs, reports and local exports stay out of the portfolio.
+data/private/
+output/
+*.evtx
+*.etl
+*.log
+*.csv
+*.zip
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+*.p12
+*.cer
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
