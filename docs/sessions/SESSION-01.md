@@ -1,6 +1,6 @@
 # Sesi Proyek 1 — Program pertama
 
-**Status: panduan siap; praktik learner belum dikonfirmasi.** Target: menulis dan menjalankan program pertama, bukan investigasi ulang log SOC harian. Perkiraan 20–30 menit, boleh lebih lama.
+**Status per 9 Oktober 2026 (Asia/Jakarta): praktik menjalankan dan mengubah data berhasil; pemahaman variable, property, dan pipeline masih perlu latihan.** Target: menulis dan menjalankan program pertama, bukan investigasi ulang log SOC harian. Perkiraan 20–30 menit, boleh lebih lama.
 
 ## Commands
 
@@ -58,13 +58,39 @@ Kirim format berikut setelah praktik:
 9. Lama pengerjaan:
 ```
 
-**Jawaban learner:** belum diterima.
+### Hasil praktik yang dilaporkan
 
-**Koreksi konkret dan penilaian:** diisi mentor setelah output dan jawaban diterima. Tidak ada klaim sesi selesai sebelum bukti tersedia.
+- Script berhasil dijalankan di terminal PowerShell VS Code pada Windows.
+- Output pertama: ProcessId 1001, Image `C:\Windows\System32\notepad.exe`, ParentImage `C:\Windows\explorer.exe`, Source `Synthetic sample`.
+- Setelah learner mengubah kode dan menjalankan ulang, ProcessId pada output menjadi 2002. Field lainnya tetap sama.
+- Source membungkus ke beberapa baris karena lebar terminal dan opsi Wrap; bukan error.
+- Kendala sebelumnya: scripts disabled, lalu script not digitally signed. Langkah troubleshooting yang diarahkan: membaca execution policies, memakai RemoteSigned pada scope Process, dan Unblock-File khusus analyzer.ps1. Output sukses dikirim setelah arahan tersebut; tidak semua command perbaikan dikirim ulang oleh learner.
+- Versi PowerShell dan durasi pengerjaan belum dilaporkan.
+
+### Jawaban learner dan koreksi
+
+Learner menjawab **"belum tau semua jawabannya"** untuk tiga pertanyaan pemahaman.
+
+| Pertanyaan | Jawaban learner | Jawaban ideal / penjelasan mentor |
+|---|---|---|
+| Fungsi $processSample | Belum tahu | Variable yang menyimpan satu object berisi data proses contoh. |
+| Perbedaan ProcessId dan Image | Belum tahu | ProcessId berisi angka identitas proses contoh; Image berisi string path executable contoh. Di sini keduanya data fiktif, bukan hasil pembacaan proses nyata. |
+| Fungsi tanda pipeline | Belum tahu | Meneruskan object di kiri ke command di kanan. Dalam script ini, object dikirim ke Format-Table untuk ditampilkan. |
+
+**Evaluasi:** run dan edit-output terverifikasi melalui output yang dikirim learner. Pemahaman tiga konsep belum terverifikasi; tidak diberikan skor numerik atau klaim penguasaan. Jawaban tentang perubahan PID hanya data contoh juga belum diberikan secara eksplisit oleh learner. Penjelasan diberikan dan perlu dicek melalui latihan kecil.
+
+**Latihan pemahaman berikutnya:** ubah Source menjadi `Latihan saya`, prediksi kolom yang berubah, simpan, jalankan ulang, dan bandingkan hasil. Belum dikerjakan.
 
 ## 📌 Catatan Penting / Milestone Hari Ini
 
-Belum dikonfirmasi. Setelah praktik diperiksa, isi hanya poin yang benar-benar berhasil dipelajari, seperti membuat file `.ps1`, memakai variable/object, dan mengubah nilai data. Jangan mencatat Sysmon reader atau anomaly detection sebagai capaian sesi ini.
+Milestone praktik terverifikasi pada 9 Oktober 2026:
+
+- Menjalankan analyzer.ps1 melalui terminal PowerShell di VS Code.
+- Menampilkan satu object data sintetis sebagai tabel.
+- Mengubah ProcessId dari 1001 menjadi 2002 dan memverifikasi perubahan output.
+- Berhasil menjalankan script setelah troubleshooting pemblokiran eksekusi.
+
+Pemahaman variable, property, dan pipeline masih perlu latihan. Pembacaan Sysmon nyata, detection, dan GUI belum diimplementasikan.
 
 ## Referensi
 
