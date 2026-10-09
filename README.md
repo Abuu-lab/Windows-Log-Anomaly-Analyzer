@@ -42,7 +42,7 @@ Rule-based detection dan baseline-based anomaly detection merupakan kemampuan be
 
 Contoh kecil → learner menulis → menjalankan → menjelaskan → menerima koreksi → menambah fitur. Starter dan panduan disiapkan dengan bantuan AI. Hasil praktik learner tidak dianggap selesai sebelum ada output dan penjelasan yang diperiksa.
 
-**Validation saat persiapan:** paket dan tautan internal diperiksa. Script belum dijalankan pada Windows; runtime PowerShell tidak tersedia di lingkungan persiapan. Bukti Windows run dan evaluasi learner masih menunggu Sesi 1.
+**Validation per 9 Oktober 2026:** learner mengirim output Windows run dengan ProcessId 1001, lalu 2002 setelah edit dan run ulang. Data masih sintetis. Runtime PowerShell tidak tersedia di lingkungan persiapan; verifikasi run berdasarkan output learner. Pemahaman variable, property, dan pipeline masih perlu latihan. Lihat [hasil dan koreksi Sesi 1](docs/sessions/SESSION-01.md).
 
 Gunakan hanya data sintetis atau contoh yang sudah ditinjau sebelum dipublikasikan. `.gitignore` membantu mengecualikan log, tetapi tidak otomatis menyamarkan data atau menghapus file yang sudah pernah dilacak Git.
 
